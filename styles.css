@@ -48,6 +48,7 @@
 
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; }
 
 :root {
   --yellow:    #BAF700;
@@ -158,8 +159,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: none;
   flex-direction: column;
   gap: 5px;
-  width: 32px; height: 32px;
+  width: 44px; height: 44px;
   justify-content: center;
+  align-items: center;
 }
 .nav__hamburger span {
   display: block; height: 2px;
@@ -545,7 +547,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ===== PHOTO BACKDROP (about + clients) ===== */
 .photo-backdrop {
-  background: url('images-videos/about_us_section.jpg') center/cover no-repeat;
+  background: url('images-videos/about_us_section.webp') center/cover no-repeat;
   position: relative;
 }
 
@@ -757,10 +759,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* Photos */
-.process__img--s1 { background-image: url('images-videos/Notre%20expertise%20en%20action/Consultation%20%26%20%C3%89tude%20de%20site.jpg'); }
-.process__img--s2 { background-image: url('images-videos/Notre%20expertise%20en%20action/Conception%20%26%20Planification%20du%20syst%C3%A8me.jpg'); }
-.process__img--s3 { background-image: url('images-videos/Notre%20expertise%20en%20action/Installation%20professionnelle.jpg'); }
-.process__img--s4 { background-image: url('images-videos/Notre%20expertise%20en%20action/Suivi%20%26%20Support%20continu.jpg'); }
+.process__img--s1 { background-image: url('images-videos/Notre%20expertise%20en%20action/Consultation%20%26%20%C3%89tude%20de%20site.webp'); }
+.process__img--s2 { background-image: url('images-videos/Notre%20expertise%20en%20action/Conception%20%26%20Planification%20du%20syst%C3%A8me.webp'); }
+.process__img--s3 { background-image: url('images-videos/Notre%20expertise%20en%20action/Installation%20professionnelle.webp'); }
+.process__img--s4 { background-image: url('images-videos/Notre%20expertise%20en%20action/Suivi%20%26%20Support%20continu.webp'); }
 
 /* Badge numéroté vert — centré exactement sur le bord du cercle */
 .process__num {
@@ -1355,6 +1357,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  /* process grid : 4 colonnes fixes (952px) déborderaient entre 769-1000px */
+  .process__grid { grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; }
+  .process__item { min-height: 380px; }
+}
 @media (max-width: 900px) {
   .about__content { max-width: 420px; }
   .about__overlay {
@@ -1389,6 +1396,31 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .cta-form__field--full { grid-column: 1; }
   .cta-banner__form-title { font-size: 1.4rem; margin-bottom: 1.2rem; }
   .cta-banner__btn { width: 100%; justify-content: center; }
+
+  /* Overlays projets toujours visibles sur tactile */
+  .project-card__overlay {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Désactiver le scale au hover sur les cartes services (tactile) */
+  .services__grid:hover .service-card,
+  .services__grid .service-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Désactiver le lift de la carte stats au tactile */
+  .stats__card:hover {
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.07) !important;
+  }
+  .stats__item:hover .stats__icon,
+  .stats__item:hover .stats__number,
+  .stats__item:hover .stats__label { transform: none; }
+
+  /* Désactiver le zoom logos partenaires au tactile */
+  .client-logo:hover { transform: none; }
 }
 @media (max-width: 480px) {
   .services__grid { grid-template-columns: 1fr; }
@@ -1404,6 +1436,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .cta-form input,
   .cta-form select,
   .cta-form textarea { font-size: .88rem; padding: .7rem .85rem; }
+
+  /* Hero : réduire l'espace bas sur petits téléphones */
+  .hero { padding-bottom: 4rem; }
+
+  /* À propos : texte plus compact sur mobile */
+  .about__text { font-size: 1rem; line-height: 1.65; }
+
+  /* Processus : image en premier pour tous les items (lecture naturelle) */
+  .process__item--bottom .process__img-wrap {
+    order: -1;
+    margin-top: 0;
+  }
+  .process__item--bottom .process__body { margin-top: 2rem; }
+  .process__item--bottom .process__num {
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+
+  /* Carousel projets : remplir l'écran sur petits téléphones */
+  .project-card { flex: 0 0 calc(100vw - 2.5rem); }
 }
 
 /* ===== SCROLL REVEAL ===== */

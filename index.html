@@ -102,7 +102,8 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" /></noscript>
 </head>
 <body>
 
@@ -255,7 +256,7 @@
     <div class="services__grid">
 
       <div class="service-card" data-reveal style="--reveal-delay:80ms">
-        <div class="service-card__photo" style="background-image: url('images-videos/solar-solutions/R%C3%A9sidentiel.jpg')"></div>
+        <div class="service-card__photo" style="background-image: url('images-videos/solar-solutions/R%C3%A9sidentiel.webp')"></div>
         <div class="service-card__body">
           <h3 class="service-card__name">Résidentiel</h3>
           <p class="service-card__desc">Installation photovoltaïque pour maisons individuelles, villas et immeubles résidentiels.</p>
@@ -263,7 +264,7 @@
       </div>
 
       <div class="service-card" data-reveal style="--reveal-delay:200ms">
-        <div class="service-card__photo" style="background-image: url('images-videos/solar-solutions/Industriel%20%26%20Commercial.jpg')"></div>
+        <div class="service-card__photo" style="background-image: url('images-videos/solar-solutions/Industriel%20%26%20Commercial.webp')"></div>
         <div class="service-card__body">
           <h3 class="service-card__name">Industriel &amp; Commercial</h3>
           <p class="service-card__desc">Centrales solaires pour usines, entrepôts et centres commerciaux raccordés au réseau.</p>
@@ -271,7 +272,7 @@
       </div>
 
       <div class="service-card" data-reveal style="--reveal-delay:320ms">
-        <div class="service-card__photo" style="background-image: url('images-videos/solar-solutions/Pompage%20solaire.jpg')"></div>
+        <div class="service-card__photo" style="background-image: url('images-videos/solar-solutions/Pompage%20solaire.webp')"></div>
         <div class="service-card__body">
           <h3 class="service-card__name">Pompage solaire</h3>
           <p class="service-card__desc">Systèmes de pompage alimentés par l'énergie solaire pour l'agriculture et l'irrigation.</p>
@@ -312,39 +313,39 @@
   <section class="clients">
 <div class="clients__marquee">
       <div class="clients__track">
-        <div class="client-logo"><img src="images-videos/logo-partenaires/steg-removebg-preview.png"          alt="STEG"           loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/anme-removebg-preview.png"          alt="ANME"           loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/giz-removebg-preview.png"           alt="GIZ"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/abb-removebg-preview.png"           alt="ABB"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/schneider-removebg-preview.png"     alt="Schneider"      loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/sma-removebg-preview.png"           alt="SMA"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/jinko-removebg-preview.png"         alt="Jinko Solar"    loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/longi-removebg-preview.png"         alt="LONGi Solar"    loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.png" alt="Canadian Solar" loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.png"       alt="JA Solar"       loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.png"    alt="Think Power"    loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/veichi-removebg-preview.png"        alt="Veichi"         loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/kbe-removebg-preview.png"           alt="KBE"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.png"      alt="Top Cable"      loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/enis-removebg-preview.png"          alt="ENIS"           loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/assad-removebg-preview.png"         alt="Assad"          loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/steg-removebg-preview.png"          width="516" height="269" alt="STEG"           loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/anme-removebg-preview.png"          width="345" height="363" alt="ANME"           loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/giz-removebg-preview.png"           width="645" height="387" alt="GIZ"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/abb-removebg-preview.png"           width="143" height="73"  alt="ABB"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/schneider-removebg-preview.png"     width="204" height="69"  alt="Schneider"      loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/sma-removebg-preview.png"           width="110" height="76"  alt="SMA"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/jinko-removebg-preview.png"         width="226" height="96"  alt="Jinko Solar"    loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/longi-removebg-preview.png"         width="118" height="75"  alt="LONGi Solar"    loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.png" width="332" height="75"  alt="Canadian Solar" loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.png"       width="670" height="372" alt="JA Solar"       loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.png"    width="152" height="92"  alt="Think Power"    loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/veichi-removebg-preview.png"        width="197" height="62"  alt="Veichi"         loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/kbe-removebg-preview.png"           width="240" height="152" alt="KBE"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.png"      width="266" height="91"  alt="Top Cable"      loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/enis-removebg-preview.png"          width="800" height="206" alt="ENIS"           loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/assad-removebg-preview.png"         width="429" height="71"  alt="Assad"          loading="lazy" /></div>
         <!-- duplicate for seamless loop -->
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/steg-removebg-preview.png"          alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/anme-removebg-preview.png"          alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/giz-removebg-preview.png"           alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/abb-removebg-preview.png"           alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/schneider-removebg-preview.png"     alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/sma-removebg-preview.png"           alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jinko-removebg-preview.png"         alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/longi-removebg-preview.png"         alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.png" alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.png"       alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.png"    alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/veichi-removebg-preview.png"        alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/kbe-removebg-preview.png"           alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.png"      alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/enis-removebg-preview.png"          alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/assad-removebg-preview.png"         alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/steg-removebg-preview.png"          width="516" height="269" alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/anme-removebg-preview.png"          width="345" height="363" alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/giz-removebg-preview.png"           width="645" height="387" alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/abb-removebg-preview.png"           width="143" height="73"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/schneider-removebg-preview.png"     width="204" height="69"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/sma-removebg-preview.png"           width="110" height="76"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jinko-removebg-preview.png"         width="226" height="96"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/longi-removebg-preview.png"         width="118" height="75"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.png" width="332" height="75"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.png"       width="670" height="372" alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.png"    width="152" height="92"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/veichi-removebg-preview.png"        width="197" height="62"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/kbe-removebg-preview.png"           width="240" height="152" alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.png"      width="266" height="91"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/enis-removebg-preview.png"          width="800" height="206" alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/assad-removebg-preview.png"         width="429" height="71"  alt="" /></div>
       </div>
     </div>
   </section>
@@ -628,7 +629,7 @@
 
       <!-- Col 2: Siège social -->
       <div class="footer__col">
-        <h5 class="footer__col-title">SIÈGE SOCIAL</h5>
+        <h3 class="footer__col-title">SIÈGE SOCIAL</h3>
         <p>Immeuble ASSIYA, 2ème étage, N°6<br/>Av. Mohamed Jmal, Sfax 3062<br/>Tunisie</p>
         <p>+216 44 245 400<br/>+216 44 245 200</p>
         <p>contact@teslaenergie.tn</p>
@@ -637,7 +638,7 @@
 
       <!-- Col 3: Navigation -->
       <div class="footer__col">
-        <h5 class="footer__col-title">NAVIGATION</h5>
+        <h3 class="footer__col-title">NAVIGATION</h3>
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Réalisations</a></li>
@@ -648,7 +649,7 @@
 
       <!-- Col 4: Suivez-nous -->
       <div class="footer__col">
-        <h5 class="footer__col-title">SUIVEZ-NOUS</h5>
+        <h3 class="footer__col-title">SUIVEZ-NOUS</h3>
         <ul>
           <li><a href="https://www.facebook.com/TESLASFAX" target="_blank" rel="noopener">Facebook</a></li>
           <li><a href="https://www.instagram.com/tesla_energie/" target="_blank" rel="noopener">Instagram</a></li>
