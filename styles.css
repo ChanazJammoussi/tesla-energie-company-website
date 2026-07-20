@@ -397,7 +397,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 @media (max-width: 640px) {
-  .stats { margin-top: -3rem; }
+  .stats { margin-top: -2rem; }
   .stats__card { flex-direction: row; overflow-x: auto; }
   .stats__divider { width: 1px; height: auto; align-self: stretch; margin: 1rem 0; }
   .stats__item { padding: 1.2rem .8rem; flex: 1 0 0; min-width: 0; }
