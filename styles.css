@@ -622,7 +622,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Body text */
 .about__text {
   font-size: 1.25rem;
-  color: rgba(255,255,255,.82);
+  color: rgba(255,255,255,.95);
   line-height: 1.72;
   margin-bottom: 2rem;
   max-width: 48ch;
