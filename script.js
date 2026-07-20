@@ -506,7 +506,7 @@ window.addEventListener('scroll', () => {
   if (!track) return;
 
   track.addEventListener('click', function (e) {
-    var card = e.target.closest('.project-card:not([aria-hidden])');
+    var card = e.target.closest('.project-card');
     if (!card) return;
 
     var isOpen = card.classList.contains('overlay-open');
