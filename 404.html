@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page introuvable — Tesla Energie</title>
+  <meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">
+      <img class="nav__logo-icon" src="logo.png" alt="Tesla Energie" width="40" height="40" />
+      <div class="nav__logo-text">
+        <span class="nav__logo-name">Tesla Energie</span>
+        <span class="nav__logo-sub">Experts du Photovoltaïque</span>
+      </div>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="nav__link">Accueil</a></li>
+      <li><a href="index.html#services" class="nav__link">Services</a></li>
+      <li><a href="index.html#projects" class="nav__link">Réalisations</a></li>
+      <li><a href="index.html#about" class="nav__link">À propos</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="index.html#contact" class="nav__cta">CONTACT</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="menuClose">✕</button>
+    <ul>
+      <li><a href="index.html" class="close-menu">Accueil</a></li>
+      <li><a href="index.html#services" class="close-menu">Services</a></li>
+      <li><a href="index.html#projects" class="close-menu">Réalisations</a></li>
+      <li><a href="index.html#about" class="close-menu">À propos</a></li>
+      <li><a href="index.html#contact" class="close-menu">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="error-page">
+    <div class="error-page__content">
+      <span class="error-page__code">404</span>
+      <h1 class="error-page__title">Page introuvable</h1>
+      <p class="error-page__text">La page que vous recherchez n'existe pas ou a été déplacée.</p>
+      <a href="index.html" class="error-page__cta">
+        <span class="error-page__cta-arrow">&larr;</span>
+        <span class="error-page__cta-text">RETOUR A L'ACCUEIL</span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <img class="footer__logo-icon" src="logo.png" alt="Tesla Energie" width="50" height="50" />
+        <p class="footer__brand-name">Tesla Energie<br/>Experts du Photovoltaïque</p>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__col-title">SIEGE SOCIAL</h5>
+        <p>Immeuble ASSIYA, 2eme etage, N°6<br/>Av. Mohamed Jmal, Sfax 3062<br/>Tunisie</p>
+        <p>+216 44 245 400<br/>+216 44 245 200</p>
+        <p>contact@teslaenergie.tn</p>
+        <p class="footer__hours">Lun - Sam : 8h00 - 18h00</p>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__col-title">NAVIGATION</h5>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#projects">Realisations</a></li>
+          <li><a href="index.html#about">A propos</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 class="footer__col-title">SUIVEZ-NOUS</h5>
+        <ul>
+          <li><a href="https://www.facebook.com/TESLASFAX" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/tesla_energie/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/tesla-energie/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__legal">
+        <a href="mentions-legales.html">Mentions legales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialite</a>
+        <a href="accessibilite.html">Accessibilite</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Tesla Energie - Sfax, Tunisie</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
