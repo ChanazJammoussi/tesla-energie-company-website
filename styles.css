@@ -974,7 +974,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: opacity .35s ease, transform .35s ease;
 }
 
-.project-card:hover .project-card__overlay {
+.project-card:hover .project-card__overlay,
+.project-card.overlay-open .project-card__overlay {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1397,11 +1398,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .cta-banner__form-title { font-size: 1.4rem; margin-bottom: 1.2rem; }
   .cta-banner__btn { width: 100%; justify-content: center; }
 
-  /* Overlays projets toujours visibles sur tactile */
-  .project-card__overlay {
-    opacity: 1;
-    transform: none;
-  }
+  /* Overlay au tap uniquement — géré via .overlay-open (script.js) */
 
   /* Désactiver le scale au hover sur les cartes services (tactile) */
   .services__grid:hover .service-card,

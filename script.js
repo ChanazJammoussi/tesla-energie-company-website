@@ -490,3 +490,32 @@ window.addEventListener('scroll', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
+
+// ── Project overlay au tap (mobile tactile uniquement) ───────
+(function () {
+  if (!window.matchMedia('(hover: none)').matches) return;
+
+  function closeAll() {
+    document.querySelectorAll('.project-card.overlay-open').forEach(function (c) {
+      c.classList.remove('overlay-open');
+    });
+  }
+
+  // Délégation sur le track pour couvrir les cartes originales uniquement
+  var track = document.getElementById('projTrack');
+  if (!track) return;
+
+  track.addEventListener('click', function (e) {
+    var card = e.target.closest('.project-card:not([aria-hidden])');
+    if (!card) return;
+
+    var isOpen = card.classList.contains('overlay-open');
+    closeAll();
+    if (!isOpen) card.classList.add('overlay-open');
+  });
+
+  // Tap en dehors du carousel = fermer
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('#projTrack')) closeAll();
+  });
+})();
