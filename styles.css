@@ -1402,7 +1402,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .cta-form { grid-template-columns: 1fr; }
   .cta-form__field--full { grid-column: 1; }
   .cta-banner__form-title { font-size: 1.4rem; margin-bottom: 1.2rem; }
-  .cta-banner__btn { width: 100%; justify-content: center; }
+  .cta-banner__btn { width: auto; max-width: 280px; align-self: center; justify-content: center; }
 
   /* Overlay au tap uniquement — géré via .overlay-open (script.js) */
 
