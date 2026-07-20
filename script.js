@@ -1,5 +1,52 @@
 'use strict';
 
+// ── Preloader ─────────────────────────────────────────────────
+(function () {
+  var preloader = document.getElementById('preloader');
+  var fill      = document.getElementById('preloaderFill');
+  if (!preloader) return;
+
+  var criticals = Array.from(document.querySelectorAll('[data-critical]'));
+  var total     = criticals.length;
+  var loaded    = 0;
+  var done      = false;
+
+  function progress() {
+    if (done) return;
+    loaded++;
+    fill.style.width = Math.min(100, Math.round(loaded / total * 100)) + '%';
+    if (loaded >= total) hide();
+  }
+
+  function hide() {
+    if (done) return;
+    done = true;
+    fill.style.width = '100%';
+    setTimeout(function () {
+      preloader.classList.add('hidden');
+      setTimeout(function () { preloader.remove(); }, 750);
+    }, 300);
+  }
+
+  criticals.forEach(function (el) {
+    var tag = el.tagName.toLowerCase();
+
+    if (tag === 'video') {
+      if (el.readyState >= 2) { progress(); return; }
+      el.addEventListener('loadeddata', progress, { once: true });
+      el.addEventListener('canplay',    progress, { once: true });
+      el.addEventListener('error',      progress, { once: true });
+    } else {
+      if (el.complete && el.naturalWidth > 0) { progress(); return; }
+      el.addEventListener('load',  progress, { once: true });
+      el.addEventListener('error', progress, { once: true });
+    }
+  });
+
+  // Fallback — masquer après 6s maximum
+  setTimeout(hide, 6000);
+})();
+
 // Hamburger menu
 const hamburger    = document.getElementById('hamburger');
 const mobileMenu   = document.getElementById('mobileMenu');

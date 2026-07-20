@@ -8,23 +8,26 @@
   <meta name="keywords" content="Tesla Energie, panneaux solaires, photovoltaïque, énergie solaire, Sfax, Tunisie, installation solaire, pompage solaire, énergie renouvelable" />
   <meta name="author" content="Tesla Energie" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.teslaenergie.tn/" />
+  <link rel="canonical" href="https://teslaenergie.netlify.app/" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- Open Graph (Facebook, LinkedIn) -->
   <meta property="og:title" content="Tesla Energie — Les experts du Photovoltaïque à Sfax, Tunisie" />
   <meta property="og:description" content="Installation de panneaux solaires photovoltaïques. Solutions résidentielles, industrielles et agricoles. Étude technique gratuite." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.teslaenergie.tn/" />
-  <meta property="og:image" content="https://www.teslaenergie.tn/images-videos/og-image.jpg" />
+  <meta property="og:url" content="https://teslaenergie.netlify.app/" />
+  <meta property="og:image" content="https://teslaenergie.netlify.app/images-videos/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="fr_TN" />
   <meta property="og:site_name" content="Tesla Energie" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tesla Energie — Les experts du Photovoltaïque" />
   <meta name="twitter:description" content="Installation de panneaux solaires photovoltaïques à Sfax, Tunisie. Étude technique gratuite." />
-  <meta name="twitter:image" content="https://www.teslaenergie.tn/images-videos/og-image.jpg" />
+  <meta name="twitter:image" content="https://teslaenergie.netlify.app/images-videos/og-image.jpg" />
 
   <link rel="icon" type="image/png" href="images-videos/favicon.png" />
 
@@ -35,9 +38,9 @@
     "@type": ["LocalBusiness", "Organization"],
     "name": "Tesla Energie",
     "description": "Expert en installation de systèmes photovoltaïques à Sfax, Tunisie. Solutions résidentielles, industrielles et agricoles.",
-    "url": "https://www.teslaenergie.tn/",
-    "logo": "https://www.teslaenergie.tn/images-videos/logo.png",
-    "image": "https://www.teslaenergie.tn/images-videos/og-image.jpg",
+    "url": "https://teslaenergie.netlify.app/",
+    "logo": "https://teslaenergie.netlify.app/images-videos/logo.png",
+    "image": "https://teslaenergie.netlify.app/images-videos/og-image.jpg",
     "telephone": "+21644245400",
     "contactPoint": [
       {
@@ -102,10 +105,19 @@
 </head>
 <body>
 
+  <!-- ========== PRELOADER ========== -->
+  <div id="preloader">
+    <img src="images-videos/logo.png" alt="Tesla Energie" class="preloader__logo" />
+    <div class="preloader__bar">
+      <div class="preloader__fill" id="preloaderFill"></div>
+    </div>
+    <p class="preloader__text">Chargement…</p>
+  </div>
+
   <!-- ========== NAV ========== -->
   <nav class="nav" id="nav">
     <a href="#home" class="nav__logo">
-      <img class="nav__logo-icon" src="images-videos/logo.png" alt="Tesla Energie" width="52" height="52" />
+      <img class="nav__logo-icon" src="images-videos/logo.png" alt="Tesla Energie" width="52" height="52" data-critical />
       <div class="nav__logo-text">
         <span class="nav__logo-name">Tesla Energie</span>
         <span class="nav__logo-sub">Experts du Photovoltaïque</span>
@@ -143,7 +155,7 @@
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
     <div class="hero__bg">
-      <video class="hero__video" autoplay muted loop playsinline>
+      <video class="hero__video" autoplay muted loop playsinline data-critical>
         <source src="images-videos/videoHeroSection.mp4" type="video/mp4">
       </video>
       <div class="hero__overlay"></div>
