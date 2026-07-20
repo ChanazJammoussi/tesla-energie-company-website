@@ -1387,6 +1387,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .services__title br { display: none; }
   .about__content { padding: 3rem 1.5rem; }
   .about__title { font-size: 1.8rem; }
+  .about__cta { gap: .6rem; }
+  .about__cta-arrow { width: 36px; height: 36px; font-size: 1rem; }
+  .about__cta-text { font-size: .68rem; letter-spacing: .1em; }
   .process__grid { grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; }
   .process__item { min-height: 420px; }
   .process__title br { display: none; }
