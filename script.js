@@ -14,14 +14,14 @@
   function progress() {
     if (done) return;
     loaded++;
-    fill.style.width = Math.min(100, Math.round(loaded / total * 100)) + '%';
+    fill.style.transform = 'scaleX(' + Math.min(1, loaded / total) + ')';
     if (loaded >= total) hide();
   }
 
   function hide() {
     if (done) return;
     done = true;
-    fill.style.width = '100%';
+    fill.style.transform = 'scaleX(1)';
     setTimeout(function () {
       preloader.classList.add('hidden');
       setTimeout(function () { preloader.remove(); }, 750);

@@ -33,10 +33,12 @@
 }
 .preloader__fill {
   height: 100%;
-  width: 0%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
   background: var(--yellow);
   border-radius: 99px;
-  transition: width .25s ease;
+  transition: transform .25s ease;
 }
 .preloader__text {
   font-size: .75rem;
@@ -230,6 +232,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   inset: 0;
   width: 100%;
   height: 100%;
+}
+.hero__poster img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -311,7 +317,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-transform: uppercase;
   line-height: 1;
   align-self: center;
-  transition: letter-spacing .2s;
 }
 .hero__cta:hover .hero__cta-text { letter-spacing: .22em; }
 
@@ -487,7 +492,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--text);
   line-height: 1;
   align-self: center;
-  transition: letter-spacing .2s;
 }
 .services__cta:hover .services__cta-text { letter-spacing: .22em; }
 
@@ -666,7 +670,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--white);
   line-height: 1;
   align-self: center;
-  transition: letter-spacing .2s;
 }
 .about__cta:hover .about__cta-text { letter-spacing: .22em; }
 
@@ -894,7 +897,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--text);
   line-height: 1;
   align-self: center;
-  transition: letter-spacing .2s;
 }
 .projects__cta:hover .projects__cta-text { letter-spacing: .22em; }
 
@@ -1068,6 +1070,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   align-items: center;
   gap: 3.5rem;
+  will-change: transform;
   width: max-content;
   padding: 10px 0;
   animation: clients-marquee 35s linear infinite;
@@ -1623,7 +1626,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--text);
-  transition: letter-spacing .2s;
 }
 .error-page__cta:hover .error-page__cta-text {
   letter-spacing: .22em;

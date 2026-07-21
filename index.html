@@ -99,12 +99,13 @@
     }
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" /></noscript>
-  <link rel="preload" as="image" href="images-videos/hero-poster.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="images-videos/hero-poster-mobile.webp" type="image/webp" fetchpriority="high" media="(max-width: 767px)" />
+  <link rel="preload" as="image" href="images-videos/hero-poster.webp" type="image/webp" fetchpriority="high" media="(min-width: 768px)" />
 </head>
 <body>
 
@@ -158,14 +159,16 @@
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
     <div class="hero__bg">
-      <img class="hero__poster"
-           src="images-videos/hero-poster.webp"
-           alt=""
-           width="1280"
-           height="854"
-           fetchpriority="high"
-           decoding="async"
-           aria-hidden="true" />
+      <picture class="hero__poster">
+        <source media="(max-width: 767px)" srcset="images-videos/hero-poster-mobile.webp" type="image/webp" />
+        <img src="images-videos/hero-poster.webp"
+             alt=""
+             width="1280"
+             height="854"
+             fetchpriority="high"
+             decoding="async"
+             aria-hidden="true" />
+      </picture>
       <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="images-videos/hero-poster.webp">
         <source src="images-videos/videoHeroSection.mp4" type="video/mp4">
       </video>
@@ -680,6 +683,6 @@
   </footer>
 
   <button id="scrollTop" aria-label="Retour en haut"></button>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
