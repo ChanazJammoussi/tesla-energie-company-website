@@ -1,0 +1,26 @@
+[build]
+  publish = "."
+
+# HTML - toujours frais apres chaque deploy
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Assets media (images-videos) - 1 an de cache navigateur
+[[headers]]
+  for = "/images-videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# CSS versionnee (?v=N)
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# JS versionnee
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

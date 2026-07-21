@@ -25,7 +25,7 @@
     setTimeout(function () {
       preloader.classList.add('hidden');
       setTimeout(function () { preloader.remove(); }, 750);
-    }, 300);
+    }, 100);
   }
 
   criticals.forEach(function (el) {
@@ -43,8 +43,8 @@
     }
   });
 
-  // Fallback — masquer après 6s maximum
-  setTimeout(hide, 6000);
+  // Fallback — masquer après 1.5s maximum
+  setTimeout(hide, 1500);
 })();
 
 // Hamburger menu
@@ -438,6 +438,16 @@ window.addEventListener('scroll', () => {
     idx = (idx + 1) % words.length;
     wordEl.textContent = words[idx];
   });
+})();
+
+// ── Hero poster: retire l'img quand la video demarre ─────────
+(function () {
+  var poster = document.querySelector('.hero__poster');
+  var video  = document.querySelector('.hero__video');
+  if (!poster || !video) return;
+  function removePoster() { poster.style.display = 'none'; }
+  if (video.readyState >= 3) { removePoster(); return; }
+  video.addEventListener('playing', removePoster, { once: true });
 })();
 
 // ── Vidéo CTA ralentie ───────────────────────────────────────

@@ -104,12 +104,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" /></noscript>
+  <link rel="preload" as="image" href="images-videos/hero-poster.webp" type="image/webp" fetchpriority="high" />
 </head>
 <body>
 
   <!-- ========== PRELOADER ========== -->
   <div id="preloader">
-    <img src="images-videos/logo.png" alt="Tesla Energie" class="preloader__logo" />
+    <img src="images-videos/logo.webp" alt="Tesla Energie" class="preloader__logo" width="500" height="500" />
     <div class="preloader__bar">
       <div class="preloader__fill" id="preloaderFill"></div>
     </div>
@@ -119,7 +120,7 @@
   <!-- ========== NAV ========== -->
   <nav class="nav" id="nav">
     <a href="#home" class="nav__logo">
-      <img class="nav__logo-icon" src="images-videos/logo.png" alt="Tesla Energie" width="52" height="52" data-critical />
+      <img class="nav__logo-icon" src="images-videos/logo.webp" alt="Tesla Energie" width="52" height="52" data-critical fetchpriority="high" />
       <div class="nav__logo-text">
         <span class="nav__logo-name">Tesla Energie</span>
         <span class="nav__logo-sub">Experts du Photovoltaïque</span>
@@ -157,7 +158,15 @@
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
     <div class="hero__bg">
-      <video class="hero__video" autoplay muted loop playsinline data-critical>
+      <img class="hero__poster"
+           src="images-videos/hero-poster.webp"
+           alt=""
+           width="1280"
+           height="854"
+           fetchpriority="high"
+           decoding="async"
+           aria-hidden="true" />
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="images-videos/hero-poster.webp">
         <source src="images-videos/videoHeroSection.mp4" type="video/mp4">
       </video>
       <div class="hero__overlay"></div>
@@ -313,39 +322,39 @@
   <section class="clients">
 <div class="clients__marquee">
       <div class="clients__track">
-        <div class="client-logo"><img src="images-videos/logo-partenaires/steg-removebg-preview.png"          width="516" height="269" alt="STEG"           loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/anme-removebg-preview.png"          width="345" height="363" alt="ANME"           loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/giz-removebg-preview.png"           width="645" height="387" alt="GIZ"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/abb-removebg-preview.png"           width="143" height="73"  alt="ABB"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/schneider-removebg-preview.png"     width="204" height="69"  alt="Schneider"      loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/sma-removebg-preview.png"           width="110" height="76"  alt="SMA"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/jinko-removebg-preview.png"         width="226" height="96"  alt="Jinko Solar"    loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/longi-removebg-preview.png"         width="118" height="75"  alt="LONGi Solar"    loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.png" width="332" height="75"  alt="Canadian Solar" loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.png"       width="670" height="372" alt="JA Solar"       loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.png"    width="152" height="92"  alt="Think Power"    loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/veichi-removebg-preview.png"        width="197" height="62"  alt="Veichi"         loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/kbe-removebg-preview.png"           width="240" height="152" alt="KBE"            loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.png"      width="266" height="91"  alt="Top Cable"      loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/enis-removebg-preview.png"          width="800" height="206" alt="ENIS"           loading="lazy" /></div>
-        <div class="client-logo"><img src="images-videos/logo-partenaires/assad-removebg-preview.png"         width="429" height="71"  alt="Assad"          loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/steg-removebg-preview.webp"          width="516" height="269" alt="STEG"           loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/anme-removebg-preview.webp"          width="345" height="363" alt="ANME"           loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/giz-removebg-preview.webp"           width="645" height="387" alt="GIZ"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/abb-removebg-preview.webp"           width="143" height="73"  alt="ABB"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/schneider-removebg-preview.webp"     width="204" height="69"  alt="Schneider"      loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/sma-removebg-preview.webp"           width="110" height="76"  alt="SMA"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/jinko-removebg-preview.webp"         width="226" height="96"  alt="Jinko Solar"    loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/longi-removebg-preview.webp"         width="118" height="75"  alt="LONGi Solar"    loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.webp" width="332" height="75"  alt="Canadian Solar" loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.webp"       width="670" height="372" alt="JA Solar"       loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.webp"    width="152" height="92"  alt="Think Power"    loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/veichi-removebg-preview.webp"        width="197" height="62"  alt="Veichi"         loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/kbe-removebg-preview.webp"           width="240" height="152" alt="KBE"            loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.webp"      width="266" height="91"  alt="Top Cable"      loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/enis-removebg-preview.webp"          width="800" height="206" alt="ENIS"           loading="lazy" /></div>
+        <div class="client-logo"><img src="images-videos/logo-partenaires/assad-removebg-preview.webp"         width="429" height="71"  alt="Assad"          loading="lazy" /></div>
         <!-- duplicate for seamless loop -->
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/steg-removebg-preview.png"          width="516" height="269" alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/anme-removebg-preview.png"          width="345" height="363" alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/giz-removebg-preview.png"           width="645" height="387" alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/abb-removebg-preview.png"           width="143" height="73"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/schneider-removebg-preview.png"     width="204" height="69"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/sma-removebg-preview.png"           width="110" height="76"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jinko-removebg-preview.png"         width="226" height="96"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/longi-removebg-preview.png"         width="118" height="75"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.png" width="332" height="75"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.png"       width="670" height="372" alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.png"    width="152" height="92"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/veichi-removebg-preview.png"        width="197" height="62"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/kbe-removebg-preview.png"           width="240" height="152" alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.png"      width="266" height="91"  alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/enis-removebg-preview.png"          width="800" height="206" alt="" /></div>
-        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/assad-removebg-preview.png"         width="429" height="71"  alt="" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/steg-removebg-preview.webp"          width="516" height="269" alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/anme-removebg-preview.webp"          width="345" height="363" alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/giz-removebg-preview.webp"           width="645" height="387" alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/abb-removebg-preview.webp"           width="143" height="73"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/schneider-removebg-preview.webp"     width="204" height="69"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/sma-removebg-preview.webp"           width="110" height="76"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jinko-removebg-preview.webp"         width="226" height="96"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/longi-removebg-preview.webp"         width="118" height="75"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/canadianSolar-removebg-preview.webp" width="332" height="75"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/jaSolar-removebg-preview.webp"       width="670" height="372" alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/thinkpower-removebg-preview.webp"    width="152" height="92"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/veichi-removebg-preview.webp"        width="197" height="62"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/kbe-removebg-preview.webp"           width="240" height="152" alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/topcalbe-removebg-preview.webp"      width="266" height="91"  alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/enis-removebg-preview.webp"          width="800" height="206" alt="" loading="lazy" /></div>
+        <div class="client-logo" aria-hidden="true"><img src="images-videos/logo-partenaires/assad-removebg-preview.webp"         width="429" height="71"  alt="" loading="lazy" /></div>
       </div>
     </div>
   </section>
@@ -539,7 +548,7 @@
   <section class="cta-banner" id="contact">
 
     <!-- Vidéo de fond -->
-    <video class="cta-banner__video" autoplay muted loop playsinline>
+    <video class="cta-banner__video" autoplay muted loop playsinline preload="metadata" poster="images-videos/cta-poster.webp">
       <source src="images-videos/videoContactSection.mp4" type="video/mp4">
     </video>
     <div class="cta-banner__overlay"></div>
@@ -623,7 +632,7 @@
 
       <!-- Col 1: Brand -->
       <div class="footer__brand">
-        <img class="footer__logo-icon" src="images-videos/logo.png" alt="Tesla Energie" width="50" height="50" />
+        <img class="footer__logo-icon" src="images-videos/logo.webp" alt="Tesla Energie" width="50" height="50" loading="lazy" />
         <p class="footer__brand-name">Tesla Energie<br/>Experts du Photovoltaïque</p>
       </div>
 
