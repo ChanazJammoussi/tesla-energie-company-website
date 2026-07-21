@@ -1376,7 +1376,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 1000px) {
   /* process grid : 4 colonnes fluides pour tablette landscape */
   .process__grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem 1rem; }
-  .process__item { min-height: 320px; }
+  .process__item { min-height: 280px; }
 }
 @media (max-width: 900px) {
   .about__content { max-width: 420px; }
@@ -1403,7 +1403,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .about__cta-arrow { width: 36px; height: 36px; font-size: 1rem; }
   .about__cta-text { font-size: .68rem; letter-spacing: .1em; }
   .process__grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem 1rem; }
-  .process__item { min-height: 340px; }
+  .process__item { min-height: 280px; }
   .process__title br { display: none; }
   .clients__track { gap: 2.5rem; }
   .footer__main { grid-template-columns: 1fr 1fr; gap: 2rem; }
