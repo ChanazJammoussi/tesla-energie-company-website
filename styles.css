@@ -166,7 +166,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
 }
 .nav__hamburger span {
-  display: block; height: 2px;
+  display: block; width: 22px; height: 2px;
   background: var(--text); border-radius: 2px;
   transition: .3s;
 }
