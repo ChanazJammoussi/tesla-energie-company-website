@@ -63,7 +63,7 @@ img { max-width: 100%; height: auto; }
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: var(--font); color: var(--text); overflow-x: hidden; position: relative; }
+body { font-family: var(--font); color: var(--text); overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
@@ -677,6 +677,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .process {
   background: var(--white);
   padding: clamp(1.5rem, 2.5vw, 2.5rem) clamp(1.5rem, 5vw, 3.5rem);
+  overflow-x: hidden;
 }
 
 .process__header {
