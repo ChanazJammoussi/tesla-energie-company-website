@@ -1647,3 +1647,17 @@ body.hero-ready .hero__word {
 .error-page__cta:hover .error-page__cta-text {
   letter-spacing: .22em;
 }
+
+/* ===== LCP MOBILE — forcer visibilité immédiate du titre hero ===== */
+/* Neutralise toute animation/transition qui pourrait retarder le paint  */
+/* sur mobile et empêcher Lighthouse de mesurer le LCP correctement.    */
+@media (max-width: 767px) {
+  .hero__title,
+  .hero__word,
+  .hero__content {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
