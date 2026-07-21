@@ -62,8 +62,8 @@ img { max-width: 100%; height: auto; }
   --font:      'Inter', sans-serif;
 }
 
-html { scroll-behavior: smooth; overflow-x: clip; }
-body { font-family: var(--font); color: var(--text); overflow-x: hidden; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); overflow-x: hidden; position: relative; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
