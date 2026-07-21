@@ -22,10 +22,8 @@
     if (done) return;
     done = true;
     fill.style.transform = 'scaleX(1)';
-    setTimeout(function () {
-      preloader.classList.add('hidden');
-      setTimeout(function () { preloader.remove(); }, 750);
-    }, 100);
+    preloader.classList.add('hidden');
+    setTimeout(function () { preloader.remove(); }, 270);
   }
 
   criticals.forEach(function (el) {
@@ -43,8 +41,8 @@
     }
   });
 
-  // Fallback — masquer après 1.5s maximum
-  setTimeout(hide, 1500);
+  // Fallback — masquer après 500ms maximum
+  setTimeout(hide, 500);
 })();
 
 // Hamburger menu
@@ -100,17 +98,25 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   let hovered     = false;
   let animating   = false; // navigation manuelle en cours
 
-  // Largeur d'un set complet (5 cartes originales)
+  // Largeur d'un set complet — mise en cache pour éviter un reflow par frame
+  let _hwCache = null;
   function halfWidth() {
-    return [...track.querySelectorAll('.project-card:not([aria-hidden])')].reduce((s, c) => {
+    if (_hwCache !== null) return _hwCache;
+    _hwCache = [...track.querySelectorAll('.project-card:not([aria-hidden])')].reduce((s, c) => {
       return s + c.offsetWidth + parseFloat(getComputedStyle(c).marginRight);
     }, 0);
+    return _hwCache;
   }
+  window.addEventListener('resize', function () { _hwCache = null; }, { passive: true });
 
+  let _cwCache = null;
   function cardWidth() {
+    if (_cwCache !== null) return _cwCache;
     const c = track.querySelector('.project-card');
-    return c.offsetWidth + parseFloat(getComputedStyle(c).marginRight);
+    _cwCache = c.offsetWidth + parseFloat(getComputedStyle(c).marginRight);
+    return _cwCache;
   }
+  window.addEventListener('resize', function () { _cwCache = null; }, { passive: true });
 
   function setPos(p, withTransition) {
     track.style.transition = withTransition ? 'transform .45s cubic-bezier(.25,.1,.25,1)' : 'none';
