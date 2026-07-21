@@ -53,8 +53,25 @@ const mobileMenu   = document.getElementById('mobileMenu');
 const mobileOverlay = document.getElementById('mobileOverlay');
 const menuClose    = document.getElementById('menuClose');
 
-const openMenu  = () => { mobileMenu.classList.add('open'); mobileOverlay.classList.add('visible'); hamburger.classList.add('open'); document.body.style.overflow='hidden'; };
-const closeMenu = () => { mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('visible'); hamburger.classList.remove('open'); document.body.style.overflow=''; };
+let _menuScrollY = 0;
+const openMenu  = () => {
+  _menuScrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top      = `-${_menuScrollY}px`;
+  document.body.style.width    = '100%';
+  mobileMenu.classList.add('open');
+  mobileOverlay.classList.add('visible');
+  hamburger.classList.add('open');
+};
+const closeMenu = () => {
+  mobileMenu.classList.remove('open');
+  mobileOverlay.classList.remove('visible');
+  hamburger.classList.remove('open');
+  document.body.style.position = '';
+  document.body.style.top      = '';
+  document.body.style.width    = '';
+  window.scrollTo(0, _menuScrollY);
+};
 
 hamburger.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
 menuClose.addEventListener('click', closeMenu);
