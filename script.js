@@ -459,6 +459,7 @@ window.addEventListener('scroll', () => {
 
   wordEl.addEventListener('animationiteration', function () {
     idx = (idx + 1) % words.length;
+    console.log('[LCP-DEBUG] heroWord textContent →', words[idx], 'à', performance.now().toFixed(0) + 'ms');
     wordEl.textContent = words[idx];
   });
 })();
@@ -553,11 +554,22 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-// ── Hero-ready: active les animations hero après le premier paint ─
-// Double rAF garantit que le premier paint est capturé par Lighthouse
-// AVANT que l'animation heroWord ne démarre (évite opacity:0 au LCP)
-requestAnimationFrame(function () {
-  requestAnimationFrame(function () {
+// ── Hero-ready: active les animations hero après window.load ─────
+// window.load garantit que le H1 est totalement statique au premier
+// paint (LCP capturé). Les animations ne démarrent qu'une fois tous
+// les assets chargés — le H1 ne sera jamais modifié avant ce point.
+// Double rAF retiré : en CPU throttlé Lighthouse les deux frames
+// pouvaient s'exécuter avant le premier paint et démarrer l'animation.
+console.time('[hero-ready]');
+(function () {
+  var done = false;
+  function trigger() {
+    if (done) return;
+    done = true;
+    console.timeEnd('[hero-ready]');
     document.body.classList.add('hero-ready');
-  });
-});
+  }
+  window.addEventListener('load', trigger, { once: true });
+  // Fallback 2 s : garantit l'animation même si window.load est lent
+  setTimeout(trigger, 2000);
+})();
