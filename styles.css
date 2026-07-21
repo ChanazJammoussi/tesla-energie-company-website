@@ -1395,7 +1395,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .nav__cta   { display: none; }
   .nav__hamburger { display: flex; }
 .hero__subtitle br { display: none; }
-  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .services__grid { grid-template-columns: repeat(3, 1fr); }
   .services__title br { display: none; }
   .about__content { padding: 3rem 1.5rem; }
   .about__title { font-size: 1.8rem; }
