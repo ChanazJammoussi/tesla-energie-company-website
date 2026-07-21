@@ -288,8 +288,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero__word {
   display: inline-block;
   color: var(--yellow);
+  /* animation added by JS after first paint via body.hero-ready */
+}
+
+body.hero-ready .hero__word {
   animation: heroWord 2.8s ease-in-out infinite;
-  animation-delay: -0.4s; /* start at ~14% keyframe = fully visible */
+  animation-delay: -0.4s;
   will-change: opacity, transform;
 }
 

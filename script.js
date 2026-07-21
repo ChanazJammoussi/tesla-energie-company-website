@@ -552,3 +552,12 @@ window.addEventListener('scroll', () => {
     if (!e.target.closest('#projTrack')) closeAll();
   });
 })();
+
+// ── Hero-ready: active les animations hero après le premier paint ─
+// Double rAF garantit que le premier paint est capturé par Lighthouse
+// AVANT que l'animation heroWord ne démarre (évite opacity:0 au LCP)
+requestAnimationFrame(function () {
+  requestAnimationFrame(function () {
+    document.body.classList.add('hero-ready');
+  });
+});
