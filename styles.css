@@ -47,6 +47,18 @@
   text-transform: uppercase;
 }
 
+/* ===== FONT FALLBACK — same metrics as Inter, prevents LCP update on font-swap ===== */
+@font-face {
+  font-family: 'Inter Fallback';
+  font-style: normal;
+  font-weight: 400 900;
+  src: local('Arial'), local('Helvetica Neue');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; }
@@ -58,7 +70,7 @@ img { max-width: 100%; height: auto; }
   --text-mid:  #444444;
   --white:     #ffffff;
   --nav-h:     70px;
-  --font:      'Inter', sans-serif;
+  --font:      'Inter', 'Inter Fallback', sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -277,6 +289,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: inline-block;
   color: var(--yellow);
   animation: heroWord 2.8s ease-in-out infinite;
+  animation-delay: -0.4s; /* start at ~14% keyframe = fully visible */
   will-change: opacity, transform;
 }
 
