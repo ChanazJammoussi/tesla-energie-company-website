@@ -1430,7 +1430,7 @@ body.hero-ready .hero__word {
   .cta-form { grid-template-columns: 1fr; }
   .cta-form__field--full { grid-column: 1; }
   .cta-banner__form-title { font-size: 1.4rem; margin-bottom: 1.2rem; }
-  .cta-banner__btn { width: auto; max-width: 280px; align-self: center; justify-content: center; }
+  .cta-banner__btn { width: auto; max-width: 340px; align-self: center; justify-content: center; white-space: nowrap; padding: 1rem 2rem; }
 
   /* Overlay au tap uniquement — géré via .overlay-open (script.js) */
 
